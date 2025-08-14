@@ -15,3 +15,14 @@ def char_count(file_contents):
             
             
     return chars
+
+def sort_on(items):
+    return items["num"]
+
+def sort_dic(chars):
+    char_list = []
+    for char, num in chars.items():
+        new_dict = {"char" : char, "num" : num}
+        char_list.append(new_dict)
+    char_list.sort(reverse=True, key=sort_on)
+    return char_list
